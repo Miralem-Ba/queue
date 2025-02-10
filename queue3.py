@@ -1,4 +1,5 @@
-#Das Python queue.Queue Modul
+#queue.Queue – Eine Warteschlange in Python
+
 from queue import Queue
 
 q = Queue(maxsize = 5)              # Eine Queue mit einer maximalen Größe von 5 wird erstellt    

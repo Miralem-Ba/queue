@@ -1,4 +1,5 @@
-#Die Python Liste
+#Die Python-Liste – So speicherst du mehrere Werte
+
 from collections import deque       # Importiert deque aus der collections-Bibliothek
 q = deque()                         # Erstellt eine leere deque-Warteschlange
 

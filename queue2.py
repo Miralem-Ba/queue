@@ -1,4 +1,5 @@
-#Das collections.deque Modul
+#collections.deque – Eine besondere Liste in Python
+
 from collections import deque       # Importiert deque aus der collections-Bibliothek, um eine doppelseitige Warteschlange zu verwenden
 def enqueue(x):                     # Funktion zum Hinzufügen eines Elements zur deque
  q.append(x)                        # Fügt ein Element x ans Ende der Warteschlange hinzu

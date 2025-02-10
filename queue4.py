@@ -1,4 +1,5 @@
-#Ein Python Queue mit individuellen Prioritäten
+#Warteschlange mit Priorität – Bestimmte Aufgaben zuerst abarbeiten
+
 from queue import PriorityQueue
 
 def enqueue(p, x):                  # Funktion zum Hinzufügen eines Elements mit Priorität zur PriorityQueue
