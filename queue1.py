@@ -16,12 +16,3 @@ def rear():
     i = len(q) -1                   # Berechnet den Index des letzten Elements
     return q[i]                     # Gibt das letzte Element der Warteschlange zurück
 
-
-q = []
-enqueue(1)                          # Fügt 1 in die Warteschlange ein
-enqueue(2)
-enqueue(3)
-front()                             # Zeigt das vordere Element
-rear()                              # Zeigt das hintere Element
-dequeue()                           # Entfernt das erste Element
-dequeue()
