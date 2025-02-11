@@ -12,25 +12,24 @@ def add_element_to_elemente_in_queue(queue, element):
     queue.append(element)
     return queue
 
-def setelement(queue, element):
-    queue.add(element)
+def add_list_to_queue(queue, element):
+    q.append(element)
     return queue
-
-def sum_element(queue, element):
-    queue
 
 thiselement = {
     "name": "miralem",
     "age": 28,
     "value": 1
-    
 }
 
-def add_list_to_queue(queue, element):
-    q.append(element)
+def setelement(queue, element):
+    queue.add(element)
     return queue
 
-
+def liste_iterieren(queue):
+    for element in queue:
+        print(element)
+    return queue
 
 #Main
 if __name__ == "__main__":
@@ -58,6 +57,11 @@ if __name__ == "__main__":
     q = add_list_to_queue(q, 2)
     q = add_list_to_queue(q, [9, 8, 7])
     print("verschachtelte Liste")
+    print(q)
+
+
+    q = liste_iterieren(q)
+    print("Liste iterieren")
     print(q)
 
     q = set()
@@ -91,4 +95,4 @@ if __name__ == "__main__":
 
     thiselement.update({"color": "blue", "name": "MiraLem"})
     print("farbe und name ändern")
-    print(thiselement)
+    print(thiselement) # type: ignore
