@@ -16,6 +16,8 @@ def setelement(queue, element):
     queue.add(element)
     return queue
 
+def sum_element(queue, element):
+    queue
 
 thiselement = {
     "name": "miralem",
@@ -27,7 +29,6 @@ thiselement = {
 def add_list_to_queue(queue, element):
     q.append(element)
     return queue
-
 
 
 
