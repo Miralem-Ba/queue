@@ -7,7 +7,7 @@ def add_elemte_to_queue(queue, element):
 
 # Erstes Element in der Queue löschen
 def first_element(queue):
-    q.pop(0)
+    queue.pop(0)
     return queue
 
 # Element zur Queue hinzufügen (doppelte Funktion von add_elemte_to_queue)
@@ -25,6 +25,24 @@ def add_list_to_queue(queue, z):
     for bliblablu in z:
         queue.append(bliblablu)
     return queue
+
+# Funktionen für Dictionary-Queue
+
+# Element mit einem Schlüssel in das Dictionary einfügen
+def add_element_to_dict_queue(dict_queue, key, element):
+    dict_queue[key] = element
+    return dict_queue
+
+# Ein verschachteltes Element in das Dictionary einfügen
+def add_nested_element_to_dict_queue(dict_queue, key, element):
+    dict_queue[key] = element
+    return dict_queue
+
+# Element aus dem Dictionary entfernen, falls der Schlüssel existiert
+def remove_element_dict_queue(dict_queue, key):
+    if key in dict_queue:
+        del dict_queue[key]
+    return dict_queue
 
 # Ein einzelnes Dictionary-Element zur Speicherung von Daten
 thiselement = {
@@ -51,28 +69,28 @@ def verschachteltes_element(queue, element):
 
 # Letztes Element aus der Queue löschen
 def elemente_löschen(queue):
-    queue.pop()
+    queue.pop(-1)
     return queue
 
-# Funktionen für Dictionary-Queue
+# Dictionaries in Liste aufzeigen 
+def list_dict(queue,dict_q):
+    queue.append(dict_q)
+    return queue
 
-# Element mit einem Schlüssel in das Dictionary einfügen
-def add_element_to_dict_queue(dict_queue, key, element):
-    dict_queue[key] = element
-    return dict_queue
+# Set iterieren
+def set_iterieren(element):
+    for element in my_set:
+        print(element, end="|")
 
-# Ein verschachteltes Element in das Dictionary einfügen
-def add_nested_element_to_dict_queue(dict_queue, key, element):
-    dict_queue[key] = element
-    return dict_queue
+# Vereinigung von zwei Sets und Ausgabe der Elemente mit "|" getrennt
+def vereinigung_iterieren(set1, set2):
+    union_set = set1.union(set2)
+    return union_set
 
-# Element aus dem Dictionary entfernen, falls der Schlüssel existiert
-def remove_element_dict_queue(dict_queue, key):
-    if key in dict_queue:
-        del dict_queue[key]
-    return dict_queue
-
-
+# Element entfernen
+def remove_first_set_element(my_set):
+    my_set.pop()
+    return my_set
 
 #Main
 if __name__ == "__main__":
@@ -125,22 +143,23 @@ if __name__ == "__main__":
     # Ein Tupel als Element hinzufügen
     l = (1, 2, 3, 4, 5, 6, 7, 8, 9,)
     q = add_first_element_to_queue(q,l)
-    print("elementhinzufügen")
+    print("element hinzufügen")
     print(q)
 
     print("Dictionates")
+
     # Initialisierung eines Dictionary (dict_q)
     dict_q = {}
 
     #Elemente hinzufügen in Dictionarie
-    dict_q = add_element_to_dict_queue(dict_q, "1", {"name": "miralem", "age": 28, "value":1})
-    dict_q = add_element_to_dict_queue(dict_q, "2",{"name": "edin", "age": 26, "values":2})
-    dict_q = add_element_to_dict_queue(dict_q, "3",{"name": "Lea", "age":24, "values":3})
+    dict_q = add_element_to_dict_queue(dict_q, 1, {"name": "miralem", "age": 28, "value":1})
+    dict_q = add_element_to_dict_queue(dict_q, 2,{"name": "edin", "age": 26, "values":2})
+    dict_q = add_element_to_dict_queue(dict_q, 3,{"name": "Lea", "age":24, "values":3})
     print("Dictionary nach dem Hinzufügen von Elementen")
     print(dict_q)
 
     # Element entfernen
-    dict_q = remove_element_dict_queue(dict_q, "3")
+    dict_q = remove_element_dict_queue(dict_q, 3)
     print("Dictionary nach dem Entfernen von '3' Element")
     print(dict_q)
 
@@ -149,24 +168,10 @@ if __name__ == "__main__":
     print("Dictionary nach Hinzufügen eines verschachtelten Elements")
     print(dict_q)
 
-    # Initialisierung eines Sets
-    q = set()
-
-    # Mehrere Elemente zum Set hinzufügen
-    q = setelement(q, 6)
-    q = setelement(q, 1)
-    q = setelement(q, 2)
-    q = setelement(q, 3)
-    q = setelement(q, 3)
-    q = setelement(q, 2)
-    q = setelement(q, 1)
-    q = setelement(q, 2)
-    q = setelement(q, 2)
-    q = setelement(q, 5)
-    q = setelement(q, 4)
-    q = setelement(q, 5)
-    q = setelement(q, 6)
-    print("set hinzufügen")
+    # Ein Dictionary wir erstellt
+    d = {"name": "miralem","age":28}
+    q = list_dict(q,d)
+    print("Dictionarie in Liste")
     print(q)
 
     # Dictionary bearbeiten (thiselement)
@@ -194,5 +199,55 @@ if __name__ == "__main__":
     print("element löschen")
     print(q)
 
+    # Initialisierung eines Sets
+    q = set()
+
+    # Mehrere Elemente zum Set hinzufügen
+    q = setelement(q, 6)
+    q = setelement(q, 1)
+    q = setelement(q, 2)
+    q = setelement(q, 3)
+    q = setelement(q, 3)
+    q = setelement(q, 2)
+    q = setelement(q, 1)
+    q = setelement(q, 2)
+    q = setelement(q, 2)
+    q = setelement(q, 5)
+    q = setelement(q, 4)
+    q = setelement(q, 5)
+    q = setelement(q, 6)
+    print("set hinzufügen")
+    print(q)
+
+    # Set initialisieren
+    my_set = set()
+
+    # Mehrere Elemente hinzufügen
+    my_set.add(1)
+    my_set.add(2)
+    my_set.add(2)
+    my_set.add(3)
+    my_set.add(4)
+    my_set.add(5)
+    print("Mehrere Elemente hinzufügen")
+    print(my_set)
+    
+    #Erstes Element entfernen in Set
+    my_set = remove_first_set_element(my_set)
+    print("Erstes Element Löschen")
+    print(my_set)
+
+    # Zwei Sets definieren
+    set1 = {1, 2, 3, 4}
+    set2 = {9, 8, 7, 6}
+
+    # iterieren von set
+    my_set = set_iterieren(my_set)
+    print("set iterieren")
+
+    # Zusammenfügen von 2 elemente
+    my_set = vereinigung_iterieren(set1, set2)
+    print("Zusammenfügen von set1 und set2")
+    print(my_set)
 
     # type: ignore
