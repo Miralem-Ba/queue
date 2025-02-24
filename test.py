@@ -35,12 +35,28 @@ print(max_of_two(4, 10))
 #Write a function add(a, b) that returns the sum of two numbers.
 def add(a, b):
     return(a + b)
+# Test
+print(add(3, 70))
 
 
 # Sum of List
 # Write a function sum_list(numbers) that takes a list of numbers and returns their sum.
 def sum_list(numbers):
     return sum(numbers)
+# Test
+print(sum_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]))
+
+
+# Durchschnitt einer Liste berechnen
+def average(numbers):
+    if len(numbers) == 0:  # Überprüfung, um Division durch 0 zu vermeiden
+        return 0
+    return sum(numbers) / len(numbers)
+# Test
+numbers = [10, 20, 30, 40, 50]
+print("Anzahl der Zahlen:", len(numbers))
+print("Summe:", sum(numbers))
+print("Durchschnitt:", average(numbers))
 
 
 # Fibonacci Sequence
@@ -65,7 +81,7 @@ def Fibonacci(n):
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
 # Driver Program
-print(Fibonacci(9))
+print(Fibonacci(19))
 
 
 
@@ -86,3 +102,4 @@ def count_vowels(s):                                # count_vowels(s): Zählt di
 print(count_vowels("banana"))
 print(count_vowels("miralem"))
 print(count_vowels("beautiful"))
+print(count_vowels("aabccdeefgghiijkklmmnoopqqrsstuuvwwxyyz"))
