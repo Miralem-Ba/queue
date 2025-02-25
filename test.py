@@ -6,12 +6,14 @@ def say_hello():
 say_hello()
 
 
+
 # Greet User
 # Write a function greet(name) that takes a name as an argument and prints "Hello, <name>!".
 def greet(name):
-    print("Hello", {name})
+    print("Hello", name)
 
-greet("name")
+greet("Miralem")
+
 
 
 # Check Even or Odd
@@ -22,6 +24,8 @@ def is_even(n):                                     # is_even(n): Prüft, ob ein
 print(is_even(4))
 print(is_even(7))
 
+
+
 # Find Maximum
 # Write a function max_of_two(a, b) that returns the larger of two numbers.
 def max_of_two(a, b):                               # max_of_two(a, b): Gibt die größere von zwei Zahlen zurück.
@@ -29,6 +33,7 @@ def max_of_two(a, b):                               # max_of_two(a, b): Gibt die
 # Test
 print(max_of_two(6, 2))
 print(max_of_two(4, 10))
+
 
 
 # Add Two Numbers
@@ -39,12 +44,14 @@ def add(a, b):
 print(add(3, 70))
 
 
+
 # Sum of List
 # Write a function sum_list(numbers) that takes a list of numbers and returns their sum.
 def sum_list(numbers):
     return sum(numbers)
 # Test
 print(sum_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]))
+
 
 
 # Durchschnitt einer Liste berechnen
@@ -57,6 +64,7 @@ numbers = [10, 20, 30, 40, 50]
 print("Anzahl der Zahlen:", len(numbers))
 print("Summe:", sum(numbers))
 print("Durchschnitt:", average(numbers))
+
 
 
 # Fibonacci Sequence
@@ -81,7 +89,29 @@ def Fibonacci(n):
     else:
         return Fibonacci(n-1) + Fibonacci(n-2)
 # Driver Program
-print(Fibonacci(19))
+print(Fibonacci(20))
+
+# Function for nth fibonacci ( nth = n-te Zahl in der Fibonacci-Folge.)
+# number
+FibArray = [0, 1]
+
+def fibonacci(n):
+  
+    # Check is n is less 
+    # than 0
+    if n < 0:
+        print("Incorrect input")
+        
+    # Check is n is less 
+    # than len(FibArray)
+    elif n < len(FibArray):
+        return FibArray[n]
+    else:        
+        FibArray.append(fibonacci(n - 1) + fibonacci(n - 2))
+        return FibArray[n]
+
+# Driver Program
+print(fibonacci(9))
 
 
 
@@ -92,6 +122,8 @@ def reverse_strint(s):                              # reverse_string(s): Dreht e
 
 print(reverse_strint("hallo"))
 print(reverse_strint("miralem"))
+
+
 
 # Count Vowels
 # Write a function count_vowels(s) that counts the number of vowels (a, e, i, o, u) in a given string.
