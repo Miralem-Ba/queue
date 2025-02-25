@@ -66,8 +66,25 @@ print("Summe:", sum(numbers))
 print("Durchschnitt:", average(numbers))
 
 
-
 # Fibonacci Sequence
+# Anzahl der Fibonacci-Zahlen, die ausgegeben werden sollen
+n = 20  
+# Die ersten beiden Zahlen der Fibonacci-Folge
+num1 = 0  
+num2 = 1  
+next_number = num2                                      # # Die nächste Zahl in der Sequenz (startet mit num2)  
+count = 1                                               # Zähler, um die Anzahl der ausgegebenen Zahlen zu verfolgen
+# Die Schleife läuft, bis wir die gewünschte Anzahl an Zahlen ausgegeben haben
+while count <= n:
+    print(next_number, end=" ")                         # Die aktuelle Zahl ausgeben, mit Leerzeichen statt neuer Zeile
+    
+    count += 1                                          # Zähler um 1 erhöhen
+    num1, num2 = num2, next_number                      # Werte aktualisieren: num1 wird zu num2, num2 wird zu next_number
+    next_number = num1 + num2                           # Die nächste Zahl in der Fibonacci-Folge berechnen  
+    if count > n:                                       # Anzahl zu hoch wird die Schleife beenden
+        break
+print()  
+
 # Write a function fibonacci(n) that returns the nth Fibonacci number using recursion.(https://de.wikipedia.org/wiki/Fibonacci-Folge)
 def Fibonacci(n):
 
